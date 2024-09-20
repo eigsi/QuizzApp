@@ -44,7 +44,7 @@ class SummaryItem extends StatelessWidget {
               ),
             ),
             Text(
-              itemData['question'] as String,
+              itemData['correct_answer'] as String,
               style: const TextStyle(
                 color: Colors.white,
               ),
