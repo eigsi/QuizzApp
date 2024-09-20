@@ -35,4 +35,4 @@ flutter hot reload
 ```
 
 ## Quizz Material
-The questions of the quizz are in the file `/lib/data/questions.dart`
+The questions of the quizz are in the file `/lib/data/questions.dart`, and the quizz logo is in `/assets/images/`
