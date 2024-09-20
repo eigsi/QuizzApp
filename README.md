@@ -25,6 +25,10 @@ flutter devices
 ```bash
 flutter run -d [device id]
 ```
+4. **refresh after changes**
+```bash
+flutter hot reload
+```
 
 ## Quizz Material
 The questions of the quizz are in the file `/lib/data/questions.dart`
