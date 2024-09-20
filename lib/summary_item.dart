@@ -7,6 +7,8 @@ class SummaryItem extends StatelessWidget {
 
   final Map<String, Object> itemData;
 
+// This widget displays a question and the user's answer to it, with also the question identifier.
+
   @override
   Widget build(BuildContext context) {
     final isCorrectAnswer =

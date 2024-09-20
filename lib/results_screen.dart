@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:quizz_app/data/questions.dart';
 import 'package:quizz_app/questions_sumarry.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+// This widget displays the results of the quiz and shows the user's score, using questions_summary.dart
 
 class ResultsScreen extends StatelessWidget {
   const ResultsScreen({
@@ -28,6 +31,26 @@ class ResultsScreen extends StatelessWidget {
     return summary;
   }
 
+  // Best score function
+  Future<void> updateBestScore(int score) async {
+    // udpate the best score
+    final prefs = await SharedPreferences.getInstance();
+    final bestScore = prefs.getInt('bestScore') ?? 0;
+    if (score > bestScore) {
+      await prefs.setInt('bestScore', score);
+    }
+
+    // update infos for average score
+    final totalScore = prefs.getInt('totalScore') ?? 0;
+    final numOfQuizzes = prefs.getInt('numOfQuizzes') ?? 0;
+
+    final newTotalScore = totalScore + score;
+    final newNumOfQuizzes = numOfQuizzes + 1;
+
+    await prefs.setInt('totalScore', newTotalScore);
+    await prefs.setInt('numOfQuizzes', newNumOfQuizzes);
+  }
+
   @override
   Widget build(BuildContext context) {
     final summaryData = getSummaryData();
@@ -35,6 +58,8 @@ class ResultsScreen extends StatelessWidget {
     final numCorrectQuestions = summaryData.where((data) {
       return data['user_answer'] == data['correct_answer'];
     }).length;
+
+    updateBestScore(numCorrectQuestions);
 
     return SizedBox(
       width: double.infinity,

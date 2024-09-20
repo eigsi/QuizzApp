@@ -6,6 +6,10 @@ The questions of the quizz will help the user to learn about coding with Flutter
 ## Project Features
 
 This project runs on `dart` and can be launched on the simulator of your choice using `Android studio` for Android devices, and `Xcode` pour IOS devices, and allows you to simulate a fonctional quizz application.
+- There are 6 questions, each offering 4 possible answers.
+- We added a Best Score feature, which is displayed on the Start Screen to see your best attempt.
+- Additionally, we implemented an Average Score feature allowing you to track your progress and see if you're mastering the subject.
+
 
 ## Project Prerequisites
 You need at least one emulateur to run this project, like `Android studio` or `Xcode`. You also need to install flutter on your device.

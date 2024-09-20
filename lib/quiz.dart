@@ -4,6 +4,8 @@ import 'package:quizz_app/questions_screen.dart';
 import 'package:quizz_app/results_screen.dart';
 import 'package:quizz_app/start_screen.dart';
 
+// This class define the change between the different screens of the quiz and the background of the app
+
 class Quiz extends StatefulWidget {
   const Quiz({super.key});
   @override
@@ -46,9 +48,8 @@ class _QuizState extends State<Quiz> {
   void restartQuiz() {
     setState(() {
       selectedAnswers = [];
-      activeScreen = QuestionsScreen(
-        onSelectAnswer: chooseAnswer,
-      );
+      activeScreen =
+          StartScreen(switchScreen); // Remet sur l'écran de démarrage
     });
   }
 

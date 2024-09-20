@@ -34,7 +34,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     return SizedBox(
       width: double.infinity,
       child: Container(
-        margin: const EdgeInsets.all(100),
+        margin: const EdgeInsets.all(70),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -43,11 +43,11 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               currentQuestion.text,
               style: GoogleFonts.lato(
                 color: Colors.white,
-                fontSize: 35,
+                fontSize: 25,
               ),
               textAlign: TextAlign.center,
             ),
-            const SizedBox(height: 90),
+            const SizedBox(height: 50),
             ...currentQuestion.getShuffledAnswers().map((answer) {
               return AnswerButton(
                 answer,

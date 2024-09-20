@@ -10,6 +10,8 @@ class QuestionIdentifier extends StatelessWidget {
   final int questionIndex;
   final bool isCorrectAnswer;
 
+// This Widget contains the number of each question and its color, depending on the answer
+
   @override
   Widget build(BuildContext context) {
     final questionNumber = questionIndex + 1;

@@ -6,6 +6,8 @@ class QuestionsSummary extends StatelessWidget {
 
   final List<Map<String, Object>> summaryData;
 
+// This widget displays a summary of the user's answers to all questions using summary_item.dart
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(

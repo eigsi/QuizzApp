@@ -1,3 +1,5 @@
+// We use this class to take the quiz question and answers from questions.dart and shuffle the answers
+
 class QuizQuestion {
   const QuizQuestion(this.text, this.answers);
 

@@ -1,3 +1,5 @@
+// This Widget contains the anserws to each question
+
 import 'package:flutter/material.dart';
 
 class AnswerButton extends StatelessWidget {
@@ -15,17 +17,17 @@ class AnswerButton extends StatelessWidget {
         style: ElevatedButton.styleFrom(
           padding: const EdgeInsets.symmetric(
             vertical: 10,
-            horizontal: 40,
+            horizontal: 15,
           ),
           backgroundColor: const Color.fromARGB(255, 111, 81, 118),
           foregroundColor: Colors.white,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(40),
+            borderRadius: BorderRadius.circular(25),
           ),
         ),
         child: Text(
           answerText,
-          style: const TextStyle(fontSize: 26),
+          style: const TextStyle(fontSize: 18),
           textAlign: TextAlign.center,
         ),
       ),
